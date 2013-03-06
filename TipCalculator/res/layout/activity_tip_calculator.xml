@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipCalculatorActivity" >
+    
+    <LinearLayout 
+        android:id="@+id/lo1"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+       	android:layout_marginLeft="20dp"
+    	android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+        
+        <TextView 
+           android:text="@string/bill_amount"
+           android:layout_height="fill_parent"
+           android:layout_width="wrap_content"
+           android:textStyle="bold"
+           android:textSize="16sp"/>
+        
+        <EditText 
+            android:id="@+id/edtBillAmount"
+            android:layout_height="fill_parent"
+         	android:layout_width="fill_parent"
+         	android:layout_marginLeft="10dp"
+         	android:inputType="numberDecimal"
+       		android:textSize="16sp"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+          android:id="@+id/lo2"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content"
+       	  android:layout_width="match_parent"
+       	  android:layout_marginLeft="20dp"
+    	  android:layout_marginRight="20dp"
+          android:layout_marginTop="10dp"
+          android:layout_below="@id/lo1">
+        
+        <CheckBox 
+            android:id="@+id/chkRound"
+            android:layout_height="fill_parent"
+         	android:layout_width="fill_parent"
+         	android:text="@string/check_text"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/lo3"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+       	android:layout_width="match_parent"
+       	android:layout_marginLeft="20dp"
+    	android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/lo2">
+        
+        <Button 
+            android:id="@+id/btnCalculate"
+            android:layout_height="wrap_content"
+       	  	android:layout_width="wrap_content"
+       	  	android:text="@string/calc"
+       	  	android:textSize="16sp"
+       	  	android:onClick="calcTip"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+       	android:layout_width="match_parent"
+       	android:layout_marginLeft="20dp"
+    	android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/lo3">
+        
+        <TextView
+            android:layout_height="wrap_content"
+       	  	android:layout_width="wrap_content"
+       	  	android:text="@string/tip"
+       	  	android:textSize="16sp"/>
+        
+        <TextView
+            android:id="@+id/txtTipResult"
+            android:layout_height="wrap_content"
+       	  	android:layout_width="wrap_content"
+       	  	android:layout_marginLeft="5dp"
+       	  	android:textSize="16sp"/>
+    
+    </LinearLayout>
+    
+    
+    </RelativeLayout>
